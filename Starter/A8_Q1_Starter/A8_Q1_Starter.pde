@@ -3,16 +3,17 @@
 
 Hero h1, h2, h3;
 void setup() {
-  size(350, 200);
+  size(700, 400);
   //initialize her character
-  h1 = new Hero(170, 100, 0.5); //x,y,scale
-  h1.speedX=0.5;
+  h1 = new Hero(width / 2, height / 2, 0.5); //x,y,scale
+  h1.speedX = 0.5;
   h2 = new Hero();  //use default values 
   h3 = new Hero(270, 120, 1.5, 1.5, 0, color(255, 168, 211), color(209, 11, 86));
 }
 void draw() { 
   //instead of background(0), we use this tansparent rectangle to give the illusion of a trail for the objects!
   rectMode(CORNER); 
+  noStroke();
   fill(0, 30); 
   rect(0, 0, width, height); 
   
