@@ -26,17 +26,18 @@ class Button {
   }
   
   boolean mouseOver() {
-    return mouseX >= x && mouseX <= x + w && mouseY >= y && mouseY <= y + h;
+    return mouseX >= x - w/2 && mouseX <= x + w/2 && mouseY >= y-h/2 && mouseY <= y + h/2;
   }
   
   void display() {
     stroke(255);
     fill(fillColor);
+    rectMode(CENTER);
     rect(x, y, w, h);
     
     fill(255);
     textAlign(CENTER, CENTER);
-    text(caption, x + w/2, y + h/2);
+    text(caption, x, y);
   }
 
 }
