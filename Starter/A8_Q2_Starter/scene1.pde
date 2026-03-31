@@ -5,14 +5,16 @@ float a, b, m1, m2, n1, n2, n3;
 float shapeShift = 0;
 
 void scene1() {
+  background(0);
+  pushMatrix();
   A6_Q1();
+  popMatrix();
   //REQ: draw the HOME button here using the Button's display() function
   b1.display();
 }
 
 void A6_Q1(){
-  //REQ - Copy your code from Q1 in assignment A6 here (modify the code as needed, e.g. to fit the current sketch size)
-  
+  //REQ - Copy your code from Q1 in assignment A6 here (modify the code as needed, e.g. to fit the current sketch size) 
   translate(width/2, height/2);
   
   strokeWeight(5);
@@ -35,6 +37,7 @@ void A6_Q1(){
   n2 = 1;
   n3 = 1;
   supershape(a, b, m1, m2, n1, n2, n3);
+  strokeWeight(1);
 }
 
 void supershape(float a, float b, float m1, float m2, float n1, float n2, float n3) {
